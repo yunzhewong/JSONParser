@@ -2,17 +2,26 @@
   "version": 8,
   "configurePresets": [
     {
-      "name": "JSONParser",
-      "displayName": "GCC 13.1.0 x86_64-w64-mingw32 (ucrt64)",
-      "description": "Using compilers: C = C:\\msys64\\ucrt64\\bin\\gcc.exe, CXX = C:\\msys64\\ucrt64\\bin\\g++.exe",
-      "generator": "MinGW Makefiles",
+      "name": "Visual Studio Community 2019 Release - x86_amd64",
+      "displayName": "Visual Studio Community 2019 Release - x86_amd64",
+      "description": "Using compilers for Visual Studio 16 2019 (x86_x64 architecture)",
+      "generator": "Visual Studio 16 2019",
+      "toolset": "host=x86",
+      "architecture": "x64",
       "binaryDir": "${sourceDir}/out/build/${presetName}",
       "cacheVariables": {
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
-        "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
-        "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
-        "CMAKE_BUILD_TYPE": "Debug"
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe"
       }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Visual Studio Community 2019 Release - x86_amd64-debug",
+      "displayName": "Visual Studio Community 2019 Release - x86_amd64 - Debug",
+      "configurePreset": "Visual Studio Community 2019 Release - x86_amd64",
+      "configuration": "Debug"
     }
   ]
 }
