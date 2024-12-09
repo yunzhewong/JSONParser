@@ -1,1 +1,1 @@
-add_executable(JSONParser external.cpp main.cpp)
+add_executable(JSONParser JSONObject.cpp main.cpp)
