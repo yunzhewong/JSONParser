@@ -15,6 +15,7 @@ class JSONObject {
   JSONObject(std::string JSONString);
   const std::vector<std::string>& getKeys() const;
   const std::vector<JSONValue>& getValues() const;
+  std::string getString();
 };
 
 #endif
