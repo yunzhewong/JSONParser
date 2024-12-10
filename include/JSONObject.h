@@ -1,8 +1,8 @@
 #include <string>
 #include <vector>
 
-#ifndef EXTERNAL_H
-#define EXTERNAL_H
+#ifndef JSON_OBJECT_H
+#define JSON_OBJECT_H
 
 class JSONValue {};
 

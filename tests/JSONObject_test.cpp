@@ -14,3 +14,11 @@ TEST(EmptyJSONObject, Empty) {
   EXPECT_EQ(jsonObject.getValues().size(), 0);
   EXPECT_EQ(jsonObject.getString(), "{}");
 }
+
+TEST(IncorrectJSONObject, WrongStart) {
+  EXPECT_THROW(JSONObject("}"), std::runtime_error);
+}
+
+TEST(IncorrectJSONObject, TrailingWhiteSpaceAfterFirstBrace) {
+  EXPECT_THROW(JSONObject("{      "), std::runtime_error);
+}
