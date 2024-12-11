@@ -10,7 +10,7 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(JSONParser_test ../src/JSONObject.cpp JSONObject_test.cpp)
+add_executable(JSONParser_test ../src/JSONObject.cpp ../src/JSONString.cpp JSONObject_test.cpp JSONString_test.cpp)
 
 target_link_libraries(JSONParser_test gtest_main)
 
