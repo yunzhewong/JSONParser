@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-std::string_view consumeWhiteSpace(std::string_view& stringToConsume) {
+std::string_view consumeWhiteSpace(std::string_view stringToConsume) {
   while (stringToConsume.length() > 0 && std::isspace(stringToConsume[0])) {
     stringToConsume.remove_prefix(1);
   }
